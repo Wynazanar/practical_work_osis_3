@@ -15,9 +15,9 @@ npm install --dev prettier
 ```
 
 ```
-npm prettier ./src/ --check
+npx prettier ./src/ --check
 ```
 
 ```
-npm prettier ./src/ --write
+npx prettier ./src/ --write
 ```
