@@ -34,7 +34,7 @@ jobs:
       - name: Send telegram message on success
         uses: appleboy/telegram-action@master
         with:
-          to: ${{secret.tgChatId}}
-          token: ${{secret.tgToken}}
+          to: ${{ secrets.tgChatId }}
+          token: ${{ secrets.tgToken }}
           message: |
               Не знаю как, но все работает!
