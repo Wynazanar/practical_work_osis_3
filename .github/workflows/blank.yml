@@ -31,10 +31,11 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - name: Send telegram message on success
+      - if: failure()
+        name: Send telegram message on success
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.tgChatId }}
           token: ${{ secrets.tgToken }}
           message: |
-              Не знаю как, но все работает!
+              Чот пошло не так... Переделывай!
