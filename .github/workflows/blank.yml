@@ -16,7 +16,9 @@ jobs:
       - name: install dependencies
         run: npm install
       - name: check code style
-        run: npx prettier ./src/ --check 
+        run: npx prettier ./src/ --check
+      - name: update style for files
+        run: npx prettier ./src/ --write
             
       - if: failure()
         name: Send telegram message on success
