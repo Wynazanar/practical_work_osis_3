@@ -15,17 +15,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: install dependencies
         run: npm install
-
-
-      - name: check code style
-        run: npx prettier ./src/ --write
-
-      - name: git add
-        run: git add ./src/
-      - name: git commit
-        run: git commit -m "Update files"
-      - name: git push
-        run: git push origin main
             
       - name: write style
         run: npx prettier ./src/ --check
