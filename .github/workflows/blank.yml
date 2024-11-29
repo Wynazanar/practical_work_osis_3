@@ -40,6 +40,9 @@ jobs:
           token: ${{ secrets.tgToken }}
           message: |
               Чот пошло не так... Переделывай!
+
+
+          
               
    build:
     runs-on: ubuntu-latest
