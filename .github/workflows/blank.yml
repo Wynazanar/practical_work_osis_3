@@ -33,7 +33,7 @@ jobs:
         run: docker push ghcr.io/wynazanar/practical_work_osis_3/node:latest
         
       - if: failure()
-        name: Send telegram message on success
+        name: Send telegram message on failure
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.tgChatId }}
@@ -41,7 +41,14 @@ jobs:
           message: |
               Чот пошло не так... Переделывай!
 
-
+      - if: success()
+        name: Send telegram message on success
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.tgChatId }}
+          token: ${{ secrets.tgToken }}
+          message: |
+              Больше не кликай. Все как-то заработало....
           
               
    build:
