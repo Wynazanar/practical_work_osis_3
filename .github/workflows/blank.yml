@@ -20,7 +20,7 @@ jobs:
         run: npx prettier ./src/ --check
 
       - name: Build docker
-        run: docker build -t ghcr.io/wynazanar/practical_work_osis_3/node:latest ./scr/
+        run: docker build -t ghcr.io/wynazanar/practical_work_osis_3/node:latest ./src/
 
       - name: Push docker
         run: docker push ghcr.io/wynazanar/practical_work_osis_3/node:latest
