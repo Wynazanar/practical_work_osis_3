@@ -1,10 +1,10 @@
-const express = require("express");
-
+const express = require('express');
 const app = express();
-app.get("/", (req, res) => {
+
+app.get('/', (req, res) => {
   res.json({
-    message: "Hello World!",
+    message: 'Hello World!',
   });
 });
 
-app.listen(5050, () => console.log("Listening on http:localhost:5050"));
+app.listen(5050, () => console.log('Server listening on http://localhost:5050'));
